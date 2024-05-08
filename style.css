@@ -4,7 +4,7 @@
     font-family: "Poppins", sans-serif;
     color:aqua;
     scrollbar-color: #245f6a #06171e;
-    /* scrollbar-width: thin; */
+    scrollbar-width: thin;
 }
 body{
     background-image: url(image/bgimg1.jpg);
@@ -140,21 +140,50 @@ body{
 .all-songs{
     overflow-y: scroll;
     overflow-x: hidden;
-    height: 88%;
+    height: 80%;
+    margin: 2vh 0vw;
 }
 .music{
     display: flex;
     width: inherit;
-    border: 2px solid white;
     justify-content: space-between;
     padding: 0vh 3vw;
-    margin: 2vh 0vw;
+    transition: background-color 200ms ease-in-out;
+    border-bottom: 1.5px solid #24606ab9;
+}
+.music:hover{
+    background-color: #24606ab9;
 }
 .music-title{
-    width: 13vw;
+    display: flex;
+    flex-direction: column;
+    width: 12vw;
+    padding-left: 0.5vw;
+    justify-content: center;
 }
-.music > *{
-    border: 2px solid white;
+.music-title > *{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.music-title p{
+    font-size: 0.8vw;
+    padding-left: 0.5vw;
+    font-weight: 200;
+}
+.music > img:last-of-type{
+    padding: 0.8vw;
+    margin: 0.8vw 0.6vw 0.8vw 1vw;
+    border: 2px solid #2b707c;
+    border-radius: 25px;
+    font-weight: 1vw;
+    transition: background-color 200ms ease-in-out;
+}
+.music > img:last-of-type:hover{
+    background-color: #2b707c;
+}
+.music > img:last-of-type:active{
+    background-color: #ffffff78;
 }
 .main{
     width: 75%;
