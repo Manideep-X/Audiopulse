@@ -191,3 +191,9 @@ body{
     height: inherit;
     border-radius: 15px;
 }
+.main-section{
+    margin: 0vh 0vw 0vh 2vw;
+    height: 70%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
