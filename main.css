@@ -3,10 +3,12 @@
     background-color: rgba(0, 0, 0, 0.477);
     height: inherit;
     border-radius: 15px;
+    overflow: hidden;
 }
 .main-section{
-    margin: 2.5vh 0vw 0vh 2vw;
+    margin: 0vh 0vw 0vh 2vw;
     padding-right: 2.2vw;
+    padding-top: 2.5vh;
     height: 70%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -86,4 +88,12 @@
 }
 .banner > .a > a:hover{
     text-decoration:underline;
+}
+.main-nav{
+    background-color: #83838333;
+    height: 6vh;
+    padding: 0vh 1vw;
+}
+.main-nav img{
+    padding: 1.5vh 0.8vw;
 }
