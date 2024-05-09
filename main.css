@@ -19,7 +19,7 @@
     grid-template-areas: "logo list list" "logo title title" "logo play view";
     grid-template-rows: 20% 33% auto;
     max-width: 85%;
-    height: 230px;
+    height: 15vw;
     border-radius: 15px;
     padding: 2.5vw;
     background-image: linear-gradient(315deg, #03e5b84b 0%, #037cde54 74%);
@@ -54,6 +54,7 @@
     align-items: center;
 }
 .banner > .button button{
+    width: 8.3vw;
     background-color: #245f6a;
     border: none;
     display: flex;
@@ -63,6 +64,7 @@
     padding: 1vw;
     border-radius: 2vw;
     transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+    cursor: pointer;
 }
 .banner > .button button:hover{
     background-color: #2f808eae;
@@ -73,7 +75,7 @@
     box-shadow: 0vw 0vw 2vw 0.5vw rgba(0, 255, 255, 0.268);
 }
 .banner > .button img{
-    max-height: 8vh;
+    max-width: 8vw;
     padding-left: 0.8vw;
 }
 .banner > .a{
@@ -109,4 +111,50 @@
 .playlist-title label{
     font-size: 1.5vw;
     font-weight: 200;
+}
+.all-playlists{
+    max-width: 100%;
+    margin-left: 1.5vw;
+    padding: 0vh 0vw 0vh 2vw;
+    align-items: center;
+}
+.playlist{
+    position: relative;
+    display: inline-block;
+    padding: 1vw;
+    margin: 1.2vh 0.6vw;
+    width: 12.1vw;
+    border-radius: 10px;
+    background-color: #0d0a0b;
+    background-image: linear-gradient(315deg, #1d1618 0%, #009ec228 74%);
+    transition: background-image 200ms ease-in-out;
+}
+.playlist:hover{
+    background-image: linear-gradient(315deg, #2e2326 0%, #009ec245 74%);
+}
+.playlist img{
+    width: 12vw;
+    border-radius: 10px;
+}
+.playlist h3{
+    padding-left: 0.4vw;
+    font-size: 1vw;
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.playlist p{
+    padding-left: 0.4vw;
+    font-size: 0.8vw;
+    font-weight: 200;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.playBtn{
+    position: absolute;
+    background-image: url(svg/playBtn.svg);
+    background-color: #fff;
+    width: 10vw;
 }
