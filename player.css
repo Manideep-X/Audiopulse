@@ -1,0 +1,62 @@
+.player{
+    height: 22%;
+    border-radius: 15px;
+    background: linear-gradient(to bottom, rgba(0, 106, 255, 0) 0%, rgba(0, 0, 0, 0.15) 100%), radial-gradient(at top center, rgb(0, 57, 65) 0%, rgb(5, 21, 30) 120%) #006767;
+    display: grid;
+    grid-template-areas: "progress progress progress" "title controls volume" "title controls volume";
+    grid-template-rows: 30% auto auto;
+    grid-template-columns: 35% 40% auto;
+}
+/* .player > *, .player > * > *{
+    border: 2px solid white;
+} */
+.progress-bar{
+    grid-area: progress;
+}
+.song-title{
+    grid-area: title;
+    display: grid;
+    grid-template-areas: "log name name" "log artist artist";
+    height: 50%;
+    margin-left: 1vw;
+}
+.song-title img{
+    grid-area: log;
+    justify-self: center;
+    align-self: center;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.326);
+    padding: 4vh 2vw;
+}
+.song-title h3{
+    grid-area: name;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.song-title p{
+    grid-area: artist;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.controls{
+    grid-area: controls;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0vh 2vw 3vh 2vw;
+}
+.controls > img{
+    width: 8%;
+}
+.volume{
+    grid-area: volume;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0vh 2vw 3vh 2vw;
+}
+.volume > img{
+    width: 10%;
+}
