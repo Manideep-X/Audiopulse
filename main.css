@@ -156,14 +156,16 @@
     position: absolute;
     top: 60%;
     left: 62%;
-    width: 3.6vw;
+    width: 3.4vw;
     opacity: 0;
     transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
 }
 .playBtn img{
-    width: 3.4vw;
+    width: inherit;
     background-color: #3c9cadab;
     border-radius: 30px;
+    transition: background-color 200ms ease-in-out, box-shadow 200ms ease-in-out;
+    cursor: pointer;
 }
 .playlist:hover .playBtn{
     transform: translate(0%, -45%);
@@ -171,5 +173,8 @@
 }
 .playBtn img:hover{
     background-color: #3c9cad;
-    width: inherit;
+    box-shadow: 0vw 0vw 0.6vw 0.1vw rgba(0, 255, 255, 0.789);
+}
+.playBtn img:active{
+    background: #53d3e9;
 }
