@@ -154,7 +154,22 @@
 }
 .playBtn{
     position: absolute;
-    background-image: url(svg/playBtn.svg);
-    background-color: #fff;
-    width: 10vw;
+    top: 60%;
+    left: 62%;
+    width: 3.6vw;
+    opacity: 0;
+    transition: transform 200ms ease-in-out, opacity 200ms ease-in-out;
+}
+.playBtn img{
+    width: 3.4vw;
+    background-color: #3c9cadab;
+    border-radius: 30px;
+}
+.playlist:hover .playBtn{
+    transform: translate(0%, -45%);
+    opacity: 1;
+}
+.playBtn img:hover{
+    background-color: #3c9cad;
+    width: inherit;
 }
