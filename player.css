@@ -9,6 +9,58 @@
 }
 .progress-bar{
     grid-area: progress;
+    display: grid;
+    grid-template-columns: 10% 80% 10%;
+    grid-template-areas: "left bar duration";
+    align-items: center;
+    position: relative;
+}
+#time-left {
+    margin: 0% 15% 0% auto;
+    grid-area: left;
+}
+#total-time{
+    margin: 0% auto 0% 15%;
+    grid-area: duration;
+}
+.touchbar{
+    grid-area: bar;
+    position: relative;
+    height: 8px;
+    display: flex;
+    align-items: center;
+    margin: 2% 0%;
+}
+.bar{
+    border-radius: 30px;
+    background-color: rgba(0, 255, 255, 0.66);
+    height: 3px;
+    width: 100%;
+}
+.duration-bar{
+    width: 0%;
+    top: 20%;
+    height: 5px;
+    border-radius: 30px 0px 0px 30px;
+    background-color: white;
+    position: absolute;
+    transition: width 300ms;
+}
+.circle{
+    width: 5px;
+    height: 5px;
+    top: 0%;
+    border-radius: 30px;
+    background-color: white;
+    position: absolute;
+    right: -3px;
+    transition: left 300ms, right 300ms;
+}
+.touch{
+    grid-area: bar;
+    z-index: 1;
+    height: 15px;
+    cursor: pointer;
 }
 .song-title{
     grid-area: title;
@@ -46,6 +98,7 @@
 }
 .controls > img{
     width: 8%;
+    cursor: pointer;
 }
 .volume{
     grid-area: volume;
