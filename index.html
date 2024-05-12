@@ -12,7 +12,6 @@
     <link rel="icon" type="image/png" href="image/favicon.png" style="height: 32px;">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="player.css">
-    <link rel="stylesheet" href="utility.css">
     <title>Audiopulse - Web Music Player</title>
 </head>
 
@@ -35,7 +34,7 @@
                         <label for="menu">Menu</label>
                         <img src="svg/downArrow.svg" alt="Down Arrow">
                     </div>
-                    <ul>
+                    <ul id="menu">
                         <li><a href="#">
                                 <img src="svg/home.svg" alt="Home">
                                 <p>Home</p>
@@ -57,12 +56,12 @@
                     <label for="mysongs">My Library</label>
                     <img src="svg/downArrow.svg" alt="Down Arrow">
                 </div>
-                <div class="all-songs">
+                <div class="all-songs" id="mysongs">
 
 
                     <!-- Should be in JS start -->
 
-                    <div class="music">
+                    <!-- <div class="music">
                         <img src="svg/music.svg" alt="Music">
                         <div class="music-title">
                             <span> 1 Unknown Song Lorem ipsum dolor sit amet.</span>
@@ -141,7 +140,7 @@
                             <p>Artist name Lorem ipsum dolor sit amet.</p>
                         </div>
                         <img src="svg/playSong.svg" alt="Play">
-                    </div>
+                    </div> -->
 
                     <!-- Should be in JS end -->
 
@@ -172,7 +171,7 @@
                     <img src="svg/playlist.svg" alt="Playlist">
                     <label for="playlist" id="all-playlists">All Playlists</label>
                 </div>
-                <div class="all-playlists">
+                <div class="all-playlists" id="playlist">
 
 
                     <!-- Should be in the JS start -->
@@ -265,17 +264,25 @@
             </div>
             <div class="player">
                 <div class="progress-bar">
-
+                    <p id="time-left">00:00</p>
+                    <div class="touch"></div>
+                    <div class="touchbar">
+                        <div class="bar"></div>
+                        <div class="duration-bar">
+                            <div class="circle"></div>
+                        </div>
+                    </div>
+                    <p id="total-time">00:00</p>
                 </div>
                 <div class="song-title">
                     <img src="svg/music.svg" alt="Current Song">
-                    <h3>1 Unknown Song Lorem ipsum dolor sit amet.</h3>
-                    <p>Artist name Lorem ipsum dolor sit amet.</p>
+                    <h3>Select a song</h3>
+                    <p>Or playlist to play</p>
                 </div>
                 <div class="controls">
                     <img id="backwards" src="svg/backward10s.svg" alt="10sec backwards">
                     <img id="previous" src="svg/preSong.svg" alt="Previous song">
-                    <img id="play" src="svg/playBtn.svg" alt="Play song">
+                    <img id="play" src="svg/playSong_cyan.svg" alt="Play song" onclick="playSong()">
                     <img id="next" src="svg/nextSong.svg" alt="Next song">
                     <img id="forwards" src="svg/forward10s.svg" alt="10sec forwards">
                 </div>
@@ -288,6 +295,10 @@
             </div>
         </div>
     </div>
+    <script src="js/script.js"></script>
+    <script src="js/styleEvent.js"></script>
+    <script src="js/mediaTablet.js"></script>
+    <script src="js/mediaPhone.js"></script>
 </body>
 
 </html>
