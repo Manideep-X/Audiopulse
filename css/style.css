@@ -30,6 +30,9 @@ body{
     gap: 8px;
     height: inherit;
 }
+.blurBg{
+    display: none;
+}
 .sidebar{
     width: 25%;
     height: inherit;
@@ -64,6 +67,9 @@ body{
     width: 2.5vw;
     padding: 18px 0px;
     margin-right: 0.6vw;
+}
+#closeBtn{
+    display: none;
 }
 .search{
     display: flex;
